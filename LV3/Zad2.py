@@ -43,13 +43,6 @@ plt.title("MPG compared to the type of transmission")
 vs_auto = mtcars[mtcars['am'] == 0]['vs'].mean()
 vs_manual = mtcars[mtcars['am'] == 1]['vs'].mean()
 
-# Creating vs/transmission bar plot
-plt.figure()
-sns.barplot(x=['Automatic', 'Manual'], y=[vs_auto, vs_manual])
-plt.ylabel('Mean velocity and strength ratio')
-plt.xlabel('(Higher is better)')
-plt.title("V/S compared to the type of transmission")
-
 # Creating vs/transmission scatter plot
 plt.figure()
 plt.scatter(mtcars.qsec, mtcars.hp, c=mtcars.am, cmap='bwr')
