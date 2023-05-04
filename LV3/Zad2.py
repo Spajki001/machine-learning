@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -17,14 +18,14 @@ plt.xlabel('(Higher is better)')
 plt.title("MPG compared to number of cylinders")
 
 # Filter the data by number of cylinders
-drat_4cyl = mtcars[mtcars['cyl'] == 4]['drat']
-drat_6cyl = mtcars[mtcars['cyl'] == 6]['drat']
-drat_8cyl = mtcars[mtcars['cyl'] == 8]['drat']
+wt_4cyl = mtcars[mtcars['cyl'] == 4]['wt']
+wt_6cyl = mtcars[mtcars['cyl'] == 6]['wt']
+wt_8cyl = mtcars[mtcars['cyl'] == 8]['wt']
 
 # Creating drat/cyl box plot
 plt.figure()
-plt.boxplot([drat_4cyl, drat_6cyl, drat_8cyl], labels=['4 cyl', '6 cyl', '8 cyl'])
-plt.ylabel('Rear axle ratio')
+plt.boxplot([wt_4cyl, wt_6cyl, wt_8cyl], labels=['4 cyl', '6 cyl', '8 cyl'])
+plt.ylabel('Weight ratio')
 plt.title('Weight ratio compared to number of cylinders')
 
 # Filter the data by transmission type
@@ -48,6 +49,12 @@ sns.barplot(x=['Automatic', 'Manual'], y=[vs_auto, vs_manual])
 plt.ylabel('Mean velocity and strength ratio')
 plt.xlabel('(Higher is better)')
 plt.title("V/S compared to the type of transmission")
+
+# Creating vs/transmission scatter plot
+plt.figure()
+plt.scatter(mtcars.qsec, mtcars.hp, c=mtcars.am, cmap='bwr')
+plt.xlabel('Time per 1/4 mile')
+plt.ylabel('Strength (hp)')
 
 # Show the plot
 plt.show()
