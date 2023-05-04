@@ -5,8 +5,8 @@ mtcars = pd.read_csv('mtcars.csv')
 mpg_mtcars = mtcars.sort_values(by='mpg', ascending=[False])
 
 # 5 cars with the most mpg
-print("5 cars with the most mpg:")
-print(mpg_mtcars[['car', 'mpg']].head(5))
+print("5 cars with the least mpg:")
+print(mpg_mtcars[['car', 'mpg']].tail(5))
 
 # 3 cars with 8 cylinders and least mpg
 print("\n3 cars with 8 cylinders and least mpg:")
