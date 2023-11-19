@@ -3,10 +3,11 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from sklearn.metrics import confusion_matrix
 from tensorflow.keras.preprocessing import image_dataset_from_directory
+from pathlib import Path
 
 # loading data from train directory
 train_ds = image_dataset_from_directory(
- directory='Train',
+ directory=Path('LV7/Train'),
  labels='inferred',
  label_mode='categorical',
  batch_size=32,
@@ -14,7 +15,7 @@ train_ds = image_dataset_from_directory(
 )
 
 test_ds = image_dataset_from_directory(
- directory='Test',
+ directory=Path('LV7/Test'),
  labels='inferred',
  label_mode='categorical',
  batch_size=32,
@@ -58,7 +59,7 @@ history = model.fit(train_ds,
                     batch_size=batch_size,
                     epochs=epochs)
 
-model.save('SN/')
+model.save(Path('LV7/SN/'))
 
 # show test accuracy and confusion matrix
 score = model.evaluate(test_ds, verbose=0)

@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-img = plt.imread("tiger_color.png")
+img = plt.imread(Path("LV2/tiger_color.png"))
 img = img.copy()
 
 h, w, c = img.shape

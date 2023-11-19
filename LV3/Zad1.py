@@ -1,7 +1,8 @@
 import pandas as pd
+from pathlib import Path
 
 pd.set_option('display.max_columns', None)
-mtcars = pd.read_csv('mtcars.csv')
+mtcars = pd.read_csv(Path('LV3/mtcars.csv'))
 mpg_mtcars = mtcars.sort_values(by='mpg', ascending=[False])
 
 # 5 cars with the most mpg

@@ -4,8 +4,9 @@ from skimage.transform import resize
 from skimage import color
 import matplotlib.image as mpimg
 import numpy as np
+from pathlib import Path
 
-filename = 'test.png'
+filename = Path('LV6/test.png')
 
 img = mpimg.imread(filename)[:,:,:3]
 img = color.rgb2gray(img)
@@ -22,7 +23,7 @@ img = img.reshape(1,28*28)
 img = 1 - img.astype('float32')
 
 # TODO: ucitaj istreniranu neuronsku mrezu
-model = keras.models.load_model("FCN")
+model = keras.models.load_model(Path("LV6/FCN"))
 
 # TODO: napravi predikciju 
 model.predict(img)

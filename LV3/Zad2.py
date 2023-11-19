@@ -2,8 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pathlib import Path
 
-mtcars = pd.read_csv('mtcars.csv')
+mtcars = pd.read_csv(Path('LV3/mtcars.csv'))
 
 # Filter the data by number of cylinders
 mpg_4cyl = mtcars[mtcars['cyl'] == 4]['mpg'].mean()

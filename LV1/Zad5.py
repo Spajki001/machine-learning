@@ -1,8 +1,10 @@
+from pathlib import Path
+
 word_counts = {}
 unique_words = set()
 
 # Load a file
-with open('song.txt', 'r') as file:
+with open(Path("LV1/song.txt"), 'r') as file:
     # Go through every line in the file
     for line in file:
         # Separate lines in words and go through every word

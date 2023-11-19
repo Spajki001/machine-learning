@@ -5,9 +5,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pathlib import Path
 
 # ucitavanje ociscenih podataka
-df = pd.read_csv('cars_processed.csv')
+df = pd.read_csv(Path('LV4/cars_processed.csv'))
 df_sorted = df.sort_values('selling_price')
 
 print("\n")

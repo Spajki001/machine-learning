@@ -4,9 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as image
 from sklearn.cluster import KMeans
+from pathlib import Path
 
 # Učitaj sliku
-img = image.imread("example.png")
+img = image.imread(Path("LV5/example.png"))
 
 # Prikazi sliku
 plt.figure()

@@ -2,9 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as image 
 from sklearn.cluster import KMeans
+from pathlib import Path
 
 # ucitaj sliku
-img = image.imread("example_grayscale.png")
+img = image.imread(Path("LV5/example_grayscale.png"))
 
 # prikazi sliku
 plt.figure()

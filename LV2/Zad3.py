@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-img = plt.imread("tiger.png")
+img = plt.imread(Path("LV2/tiger.png"))
 img = img[:, :, 0].copy()
 
 h, w = img.shape

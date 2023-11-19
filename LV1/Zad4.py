@@ -1,5 +1,7 @@
+from pathlib import Path
+
 ime = input("Ime datoteke: ")
-fhand = open(ime)
+fhand = open(Path("LV1/" + ime))
 counter = 0
 zbroj = 0
 for line in fhand:

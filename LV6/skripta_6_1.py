@@ -3,6 +3,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from matplotlib import pyplot as plt
 from sklearn.metrics import confusion_matrix
+from pathlib import Path
 
 # Model / data parameters
 num_classes = 10
@@ -67,4 +68,4 @@ conf_matrix = confusion_matrix(y_test, predicted_classes)
 print(conf_matrix)
 
 # TODO: save the model
-model.save("FCN/")
+model.save(Path("LV6/FCN/"))

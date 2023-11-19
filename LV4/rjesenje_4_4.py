@@ -7,10 +7,11 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error, max_error
+from pathlib import Path
 
 
 # ucitavanje podataka
-df = pd.read_csv('cars_processed.csv')
+df = pd.read_csv(Path('LV4/cars_processed.csv'))
 print(df.info())
 
 X = df[['km_driven', 'year', 'engine', 'max_power']]

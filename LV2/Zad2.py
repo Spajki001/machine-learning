@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-data = np.loadtxt(open("mtcars.csv", "rb"), usecols=(1, 2, 3, 4, 5, 6), delimiter=",", skiprows=1)
+data = np.loadtxt(open(Path("LV2/mtcars.csv"), "rb"), usecols=(1, 2, 3, 4, 5, 6), delimiter=",", skiprows=1)
 
 plt.scatter(data[:, 3], data[:, 0])
 
